@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Log In Welcome</title>
+  <link rel="shortcut icon" href="Images/user-2160923_640.png" type="image/x-icon">
+  <link rel="stylesheet" href="CSS/all.min.css">
+  <link rel="stylesheet" href="CSS/bootstrap.min.css">
+  <link rel="stylesheet" href="CSS/welcome.css">
+</head>
+<body >
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+    <div class="container">
+      <span class="navbar-brand" >Crud Application</span>
+      <button class="navbar-toggler my-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <button id="userName" class="dropdown-toggle d-flex flex-wrap gap-2 align-items-center rounded-5 px-3 py-1 text-white" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="img-container overflow-hidden"><img src="Images/robot-8458438_1280.png" alt="userAvatar" class="userImageChanger w-100"></div>
+            </button>
+            <!--  -->
+            <ul class="dropdown-menu">
+              <li class="signOut align-middle"><span class="dropdown-item" id="logOut">Log Out <i class="fa-solid fa-arrow-right-from-bracket ms-2"></i></span></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="main mx-auto p-3 rounded-3">
+    <h1 class="text-center text-white">CRUD Application</h1>
+    <section class="mt-4">
+        <div class="container">
+            <label for="Product-name">Product Name</label>
+            <input type="text" name="" id="Product-name" class="my-2">
+            <label for="Product-Price">Product Price</label>
+            <input type="number" name="" id="Product-Price" class="my-2">
+            <label for="Product-Cat">Product Category</label>
+            <select name="" id="Product-Cat" class="my-2">
+                <option value="TV">TV</option>
+                <option value="Mobile">Mobile</option>
+                <option value="Laptop">Laptop</option>
+            </select>
+            <div class="form-check form-switch my-4 d-flex align-items-center gap-2">
+                <input class="form-check-input" type="checkbox" role="switch" id="Product-Sale">
+                <label class="form-check-label" for="Product-Sale">Product Sale</label>
+            </div>
+            <label for="Product-Desc">Product Description</label>
+            <textarea name="" id="Product-Desc" rows="10" class="my-2"></textarea>
+            <div class="itemBtns d-flex flex-wrap justify-content-center align-items-center gap-2">
+              <span id="Add"><button onclick="addProduct()" class="addBtn mt-2" >Add Product</button></span>
+              <button onclick="clearForm()" class="clearBtn mt-2">Clear Form</button>
+            </div>
+        </div>
+    </section>
+    <section class="container mt-3 table-responsive p-3">
+        <input oninput="searchProduct(this.value)" id="search" type="search" class="w-75 m-auto py-2" placeholder="Search by Name Or Category ......">
+        <table class="table rounded-5 mt-5 text-center">
+            <thead class="align-middle">
+                <th>Index</th>
+                <th>Product Name</th>
+                <th>Product Price</th> 
+                <th>Product Category</th>
+                <th>Product Sale</th>
+                <th>Product Description</th>
+                <th>Update</th>
+                <th>Delete</th>
+                <th><button onclick="deleteAll()" class="delBtn">Delete All</button></th>
+            </thead>
+            <tbody id="tBody" class="align-middle">
+                
+            </tbody>
+        </table>
+    </section>
+</section>
+
+  <script src="Js/bootstrap.bundle.min.js"></script>
+  <script src="Js/welcome.js"></script>
+</body>

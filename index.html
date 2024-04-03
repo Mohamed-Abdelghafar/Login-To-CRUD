@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Log In</title>
+  <link rel="shortcut icon" href="Images/user-2160923_640.png" type="image/x-icon">
+  <link rel="stylesheet" href="CSS/all.min.css">
+  <link rel="stylesheet" href="CSS/bootstrap.min.css">
+  <link rel="stylesheet" href="CSS/Style.css">
+  <link rel="stylesheet" href="CSS/mq.css">
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+</head>
+
+<body class="text-white ">
+  <video autoplay muted loop id="myVideo">
+    <source src="Videos/pexels_videos_1851190 (1080p).mp4" type="video/mp4">
+  </video>
+  <div class="position-fixed top-0 bottom-0 start-0 end-0 layer"></div>
+
+  <div class="main-card d-flex align-items-center justify-content-center">
+    <div class="card mt-5 rounded-5">
+
+      <section id="face" class=" rounded-5 text-white d-flex flex-column align-items-center justify-content-center py-2">
+        <form class="mb-4 form2 position-relative">
+          <div class=" poplayer2 position-fixed top-0 bottom-0 start-0 end-0 rounded-5 d-none"></div>
+          <div class="text-center align-middle popup-error2 rounded-5 d-flex flex-column justify-content-around align-items-center p-3 d-none">
+            <div><i class="fa-solid fa-circle-xmark fa-5x"></i></div>
+            <h3>Sorry</h3>
+            <p>Email Or Password is Wrong</p>
+            <button class="error-Button2 border-0 py-3 rounded-3" type="button">OK</button>
+          </div>
+          <label for="userEmailSignIn" class="mt-4 mb-2"> Email </label>
+          <input class="form-control  bg-transparent border-1 text-white" type="email" name="" id="userEmailSignIn"
+            placeholder="Enter Your Email">
+          <label for="userPassSignIn" class="mt-4 mb-2"> Password <i class="fa-solid fa-lock"></i></label>
+          <input class="form-control pass0  bg-transparent border-1 text-white" type="password" name=""
+            id="userPassSignIn" placeholder="Enter Your Password">
+
+          <div class="form-bottom mt-4 d-flex flex-column justify-content-center align-items-center"> 
+            <button class="signIn-button border-0 rounded-4 p-2 w-50 my-3" type="button">Sign In</button>
+            <span>Don't have an account ? <span id="SignUp" class="text-decoration-underline">Sign Up</span></span>
+            <div class="alert alert-buttonSignInF d-none  alert-danger p-2 mt-1" role="alert"> Email Or Password is Wrong </div>
+            <div class="alert alert-buttonSignInS d-none  alert-danger p-2 mt-1" role="alert"> All Inputs Are Required
+            </div>
+        </form>
+
+
+        
+
+      </section>
+
+      <!-- ************************************************************************************ -->
+
+      <section id="back" class=" rounded-5 text-white d-flex flex-column align-items-center justify-content-center ">
+        <form class="mb-4 form1 position-relative">
+          <div class=" poplayer position-fixed top-0 bottom-0 start-0 end-0 rounded-5 d-none"></div>
+          <div
+            class="text-center align-middle popup rounded-5 d-flex flex-column justify-content-around align-items-center p-3 d-none">
+            <div><i class="fa-solid fa-circle-check fa-5x "></i></div>
+            <h3>Thank You</h3>
+            <p>Your details has been successfully submited . </p>
+            <button class="success-Button border-0 py-3 rounded-3" type="button">OK</button>
+          </div>
+          <div
+            class="text-center align-middle popup-error1 rounded-5 d-flex flex-column justify-content-around align-items-center p-3 d-none">
+            <div><i class="fa-solid fa-circle-xmark fa-5x"></i></div>
+            <h3>Sorry</h3>
+            <p>This Email is already exist / Try another Email . </p>
+            <button class="error-Button border-0 py-3 rounded-3" type="button">OK</button>
+          </div>
+          
+
+          <!--  -->
+          <div class="d-flex flex-column justify-content-center align-items-center mt-3">
+            <div class="image-download mx-auto overflow-hidden"><img src="Images/robot-8458438_1280.png" alt=""
+                class="w-100 h-100"></div>
+            <div class="marker">
+              <p class="download-button my-3 p-3 rounded-5">Choose Your Avatar <i
+                  class="fa-solid fa-cloud-arrow-down"></i>
+              </p>
+            </div>
+          </div>
+          <div class="icons-container p-2 rounded-5 d-flex flex-wrap justify-content-around align-items-center d-none w-75 mx-auto">
+            <div class=" iconUser overflow-hidden my-1"><img src="Images/bird-8156308_640.jpg" alt=""
+                class="w-100 h-100"></div>
+            <div class=" iconUser overflow-hidden my-1"><img src="Images/wolf-8372315_640.jpg" alt=""
+                class="w-100 h-100"></div>
+            <div class=" iconUser overflow-hidden my-1"><img src="Images/robot-8458438_1280.png" alt=""
+                class="w-100 h-100"></div>
+            <div class=" iconUser overflow-hidden my-1"><img src="Images/girl-5299081_640.jpg" alt=""
+                class="w-100 h-100"></div>
+            <div class=" iconUser overflow-hidden my-1"><img src="Images/man-2178721_640.jpg" alt=""
+                class="w-100 h-100"></div>
+          </div>
+          <!--  -->
+          <label for="userNameSignUp" class="mt-2 mb-2"> Name </label>
+          <input class="form-control  bg-transparent border-1 text-white" type="text" name="" id="userNameSignUp"
+            placeholder="Enter Your Name">
+          <div class="alert alert-name d-none alert-danger p-2 mt-1" role="alert">Your Name must be at least 3
+            Characters / mustn't be contain numbers or Symbols
+          </div>
+          <label for="userEmailSignUp" class="mt-4 mb-2"> Email </label>
+          <input class="form-control  bg-transparent border-1 text-white" type="email" name="" id="userEmailSignUp"
+            placeholder="Enter Your Email">
+          <div class="alert alert-email d-none alert-danger p-2 mt-1" role="alert">Your Email should be like ==>
+            example@text.com</div>
+          <label for="userPassSignUp" class="mt-4 mb-2"> Password <i class="fa-solid fa-lock"></i></label>
+          <input class="form-control  bg-transparent border-1 text-white" type="password" name="" id="userPassSignUp"
+            placeholder="Enter Your Password">
+          <div class="alert alert-pass d-none alert-danger p-2 mt-1" role="alert">Your Pass must contain at least 7
+            Characters or Symbols / and less than 20 </div>
+
+          <div class="form-bottom d-flex flex-column align-items-center justify-content-center mt-5"> 
+            <button class="signUp-button border-0 rounded-4 p-2 w-50 my-3" type="button">Sign Up</button>
+            <div class="d-none alert alert-success w-25 p-1 mt-2 text-center fs-5" role="alert">
+              Sign Up is success
+            </div>
+            <span>You have an account ? <span id="hasAccount" class="text-decoration-underline">Sign In</span></span>
+            <div class="alert alert-buttonSignUpS d-none  alert-danger p-2 mt-1" role="alert"> All Inputs Are Required
+            </div>
+          </div>
+        </form>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="Js/bootstrap.bundle.min.js"></script>
+  <script src="Js/index.js"></script>
+</body>
+
+</html>

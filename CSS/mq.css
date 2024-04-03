@@ -1,0 +1,35 @@
+@media screen and ( max-width:1200px ) {
+    .main-card {width: 70%;}
+}
+@media screen and ( max-width:900px ) {
+    .main-card {width: 80%;}
+    body{
+        font-size: 14px;
+    }
+    ::placeholder {
+        font-size: 14px;
+    }
+}
+@media screen and ( max-width:767px ) {
+    .main-card {width: 85%;}
+    body{
+        font-size: 12px;
+    }
+    ::placeholder {
+        font-size: 12px;
+    }
+    .popup,.popup-error1,.popup-error2 {
+        width: 70%;
+    }
+}
+@media screen and ( max-width:575px ){
+    .image-download {
+    
+        width: 110px;
+        height: 110px;
+    }
+    .popup,.popup-error1,.popup-error2 {
+        width: 100%;
+    }
+}
+
